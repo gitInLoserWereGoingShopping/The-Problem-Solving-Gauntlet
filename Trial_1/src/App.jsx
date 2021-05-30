@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.alertWindow('danger, danger Will Robinson!!!');
+        this.alertWindow('danger, danger Will Robinson!!!2222'); //was popping up second, now FIRST and only
     }
 
     alertWindow(text) {
@@ -23,7 +23,7 @@ class App extends Component {
         return (
             <div className="textCompContainer">
                 <h1 className="textCompHeaderText">This app will alert some text</h1>
-                <TextComponent someText={this.state.textData} alertWindow={this.alertWindow('danger, danger Will Robinson!')} />
+                <TextComponent someText={this.state.textData} alertWindow={this.alertWindow} />
             </div>
         )
     }

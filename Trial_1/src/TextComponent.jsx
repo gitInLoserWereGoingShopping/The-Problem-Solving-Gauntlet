@@ -1,13 +1,16 @@
 import React from 'react';
 import TextBox from './TextBox.jsx';
 
-const TextComponent = (props) => {
+//props -> someText (array of strings), alertWindow (alert)
+const TextComponent = ({someText, alertWindow}) => {
 
     return (
-        props.someText.map((currentItem, i) => {
-                <TextBox 
-                    text={props.someText.currentItem} 
-                    func={props.alertWindow}/>  
+        someText.map((currentItem, i) => {
+                return (
+                    <TextBox key={currentItem}
+                        text={currentItem} 
+                        func={alertWindow}/>
+                )
         })
     )
 };
